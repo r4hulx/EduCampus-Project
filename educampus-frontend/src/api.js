@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // 1. Define the base URL of our backend
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://educampus-project.onrender.com/api';
 
 // 2. Create the axios instance
 const api = axios.create({

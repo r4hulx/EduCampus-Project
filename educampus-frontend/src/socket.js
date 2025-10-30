@@ -1,7 +1,7 @@
 import { io } from 'socket.io-client';
 
 // Define the URL of your backend server
-const SOCKET_URL = 'http://localhost:5001';
+const SOCKET_URL = 'https://educampus-project.onrender.com';
 
 // Create the socket connection
 // We add 'autoConnect: false' so we can manually connect when we want to
