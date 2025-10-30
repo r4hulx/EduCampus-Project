@@ -1,0 +1,85 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--color-background-page); /* Use variable */
+}
+
+.form-wrapper {
+  background: var(--color-background-component); /* Use variable */
+  padding: 2.5rem; /* More spacing */
+  border-radius: var(--border-radius); /* Use variable */
+  box-shadow: var(--shadow-md); /* Use variable */
+  width: 100%;
+  max-width: 420px;
+  border-top: 4px solid var(--color-primary); /* Nice accent */
+}
+
+.form-wrapper h1 {
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px; /* Slightly smaller radius */
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif; /* Use new font */
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.form-button {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.form-button:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 4px 10px rgba(0, 122, 255, 0.2);
+}
+
+.form-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.form-link a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-link a:hover {
+  text-decoration: underline;
+}

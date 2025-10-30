@@ -1,0 +1,218 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  /* Use the variable for the main container */
+  background-color: var(--color-background-component); 
+}
+
+.sidebar {
+  width: 280px;
+  /* THIS IS THE FIX: Use the variable, not a hardcoded color */
+  background-color: var(--color-background-component);
+  border-right: 1px solid var(--color-border);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  /* ADD THIS: Explicitly set the text color */
+  color: var(--color-text);
+}
+
+.sidebar h2 {
+  font-size: 1.25rem;
+  color: var(--color-text); /* Use variable */
+  margin-bottom: 0.5rem; /* Reduced margin */
+  transition: color 0.2s;
+  padding: 0.25rem 0;
+}
+.sidebar h2:hover {
+  color: var(--color-primary);
+}
+
+.sidebar h3 {
+  font-size: 1rem;
+  color: var(--color-text-secondary); /* Use variable */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.find-rooms-link {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  margin-bottom: -0.5rem;
+}
+
+.find-rooms-link:hover {
+  background-color: var(--color-primary-light);
+}
+
+.room-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.room-list-item {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-text-secondary); /* Use variable */
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-list-item:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.room-list-item.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+/* Active item in dark mode needs white text */
+body.dark-mode .room-list-item.active {
+  color: #ffffff;
+}
+
+.create-room-btn {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  margin-top: 1rem;
+}
+
+.create-room-btn:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 4px 10px rgba(0, 122, 255, 0.2);
+}
+
+.chat-area {
+  flex-grow: 1;
+  display: flex;
+  background-color: var(--color-background-component); /* Use variable */
+}
+
+.chat-area h1 {
+  color: var(--color-text-secondary); /* Use variable */
+  font-weight: 500;
+  margin: auto;
+}
+
+.user-list-panel {
+  width: 240px;
+  /* THIS IS THE FIX: Use the variable, not a hardcoded color */
+  background-color: var(--color-background-component);
+  border-left: 1px solid var(--color-border);
+  padding: 1.5rem;
+  /* ADD THIS: Explicitly set the text color */
+  color: var(--color-text);
+}
+
+.user-list-panel h3 {
+  font-size: 1rem;
+  color: var(--color-text-secondary); /* Use variable */
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.online-user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.online-user-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: var(--color-text); /* Use variable */
+  font-weight: 500;
+  justify-content: space-between;
+}
+
+.online-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid var(--color-border);
+}
+
+.room-list-item .room-name {
+  flex-grow: 1;
+}
+
+.delete-room-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary); /* Use variable */
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: none;
+}
+
+.room-list-item:hover .delete-room-btn {
+  display: block;
+}
+
+.delete-room-btn:hover {
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.room-list-item.active .delete-room-btn {
+  display: block;
+  /* Use variable for active text */
+  color: rgba(255, 255, 255, 0.7); 
+}
+.room-list-item.active .delete-room-btn:hover {
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.remove-user-btn {
+  background: none;
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.online-user-item:hover .remove-user-btn {
+  opacity: 1;
+}
+
+.remove-user-btn:hover {
+  background: var(--color-danger);
+  color: white;
+}

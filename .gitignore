@@ -1,0 +1,12 @@
+# Node.js
+node_modules/
+npm-debug.log
+*.log
+
+# Frontend
+educampus-frontend/node_modules/
+educampus-frontend/build/
+
+# Backend
+educampus-backend/node_modules/
+educampus-backend/.env
